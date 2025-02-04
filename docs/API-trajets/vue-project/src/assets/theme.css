@@ -1,0 +1,11 @@
+:root {
+    --bg : white;
+    --txt : black;
+    --tbody: #eee;
+    --tablealt : #ccc;
+    --highlight : rgba(255, 0, 0, 0.2);
+    --popupbackdrop: rgba(255, 255, 255, 0.6);
+    --popupbg: lightgrey;
+    --popupborder: black;
+    --closebtn: darkred;
+}

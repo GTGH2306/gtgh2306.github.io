@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div id="app">
+        <p>Babane Coins: {{ game.playerMoney }}</p>
+
+        <div id="dealerHand" v-if="game.dealerHands.length > 0">
+            <p v-if="game.playerCanPlay">Dealer: {{ game.dealerHands[0].cards[0].singularValue }}</p>
+            <p v-else>Dealer: <span v-if="game.dealerHands[0].busted">DED! </span>{{ game.dealerHands[0].value }}</p>
+            <ul v-if="game.playerCanPlay">
+                <li>{{ game.dealerHands[0].cards[0].toString() }}</li>
+                <li>Hidden</li>
+            </ul>
+            <ul v-else>
+                <li v-for="card of game.dealerHands[0].cards">{{ card.toString() }}</li>
+            </ul>
+        </div>
+
+        <div v-if="game.playerHands.length == 0">
+            <input type="number" id="argentPari" v-model="moneyBet">
+            <button for="argentPari" @click="bet">Parier</button>
+        </div>
+
+        <div v-if="game.playerHands.length > 0" id="playerHands" class="playerZone">
+            <div v-for="(hand, handid) of game.playerHands">
+                <p>Valeur: <span v-if="hand.busted">DED! </span>{{ hand.value }}</p>
+                <ul>
+                    <li v-for="card of hand.cards">{{ card.toString() }}</li>
+                </ul>
+                <p>Pari: {{ hand.bet }}</p>
+                <div class="buttons">
+                    <button v-for="choice of game.choicesAvailable(hand)" @click="playerTurn" :data-choice="choice" :data-handid="handid">{{ choice }}</button>
+                </div>
+            </div>
+        </div>
+        <button id="nextButton" v-if="!game.playerCanPlay && game.playerHands.length !== 0" @click="nextStepBtn">NEXT</button>
+        <aside>
+            <h2>Crypto Miner</h2>
+            <p>Tier {{ game.currentCryptoMiner.tier }}</p>
+            <img src="./assets/cryptominer.png" alt="">
+            <p>Mining: {{ game.currentCryptoMiner.percentToPrint }}%</p>
+            <button :disabled="!game.canPrintCrypto" @click="printCrypto">Print crypto</button>
+            <button :disabled="!game.canUpgradeCryptoMiner" @click="upgradeCryptoMiner">Upgrade Crypto Miner</button>
+            <button @click="storageClear">Effacer données</button>
+        </aside>
+    </div>
+</body>
+</html>

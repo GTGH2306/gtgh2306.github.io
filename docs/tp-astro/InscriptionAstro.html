@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP-Astro</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+
+        <div id="container">
+            <div id="shadow">
+            </div>
+            <h1>
+                EVALUATION COURS JAVASCRIPT
+            </h1>
+            <form id="form">
+                <h2>
+                    Formulaire avec traitement Javascript
+                </h2>
+                <div>
+                    <label for="free">Texte libre</label>
+                    <textarea rows="4" cols="50" id="free" name="free" class="formElement"></textarea>
+                </div>
+    
+                <div>
+                    <label for="uname">Nom d'utilisateur : </label>
+                    <input type="text" id="uname" name="uname" class="formElement">
+                </div>
+    
+                <div>
+                    <label for="firstname">Prénom : </label>
+                    <input type="text" id="firstname" name="firstname" class="formElement">
+                    <label for="mail">Email : </label>
+                    <input type="text" id="mail" name="mail" class="formElement">
+                </div>
+    
+                <div>
+                    <label for="jour">Jour</label>
+                    <select id="jour" name="jour" class="formElement">
+                    </select>
+        
+                    <label for="mois">Mois</label>
+                    <select id="mois" name="mois" class="formElement">
+                        <option value="janvier">Janvier</option>
+                        <option value="fevrier">Février</option>
+                        <option value="mars">Mars</option>
+                        <option value="avril">Avril</option>
+                        <option value="mai">Mai</option>
+                        <option value="juin">Juin</option>
+                        <option value="juillet">Juillet</option>
+                        <option value="aout">Août</option>
+                        <option value="septembre">Septembre</option>
+                        <option value="octobre">Octobre</option>
+                        <option value="novembre">Novembre</option>
+                        <option value="decembre">Décembre</option>
+                    </select>
+        
+                    <label for="annee">Année</label>
+                    <select id="annee" name="annee" class="formElement">
+                    </select>
+                </div>
+    
+                <div>
+                    <label for="pseudo">Affichage de votre pseudo : </label>
+                    <input type="text" name="pseudo" id="pseudo" readonly class="formElement">
+                </div>
+    
+                <div id="buttons">
+                    <input type="button" value="Validation" id="submit" disabled>
+                    <input type="button" value="Annuler">
+                </div>
+            </form>
+        </div>
+        
+    </main>
+    <script src="./scripts/traitement.js"></script>
+    <script src="./scripts/cookies.js"></script>
+    <script src="./scripts/inscription.js"></script>
+</body>
+</html>

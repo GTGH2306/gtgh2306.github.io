@@ -1,0 +1,283 @@
+@font-face {
+    font-family: channel-webfont;
+    src: url(./fonts/channel-webfont.woff);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/bg_motif.gif");
+}
+
+header {
+    grid-row: 1 /span 1;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url("./images/header.png");
+    background-repeat: repeat;
+    border-bottom: 2px solid white;
+    width: 100%;
+}
+
+#logo {
+    position: absolute;
+    top: 34px;
+    left: 10%;
+}
+
+header>ul {
+    list-style: none;
+    font-family: channel-webfont;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    gap: 40px;
+    margin-right: 40px;
+    padding: 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover,
+#section2>aside>ul>li>a:hover {
+    color: darkred;
+}
+
+.contenu {
+    padding: 0;
+    list-style: none;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenu>li {
+    border: solid white 2px;
+    padding-left: 15px;
+    padding-right: 40px;
+}
+
+.deroulant:hover .contenu {
+    display: block;
+}
+
+main {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("./images/container2.png");
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.25);
+}
+
+hr {
+    width: 97%;
+}
+
+figure {
+    gap: 5px;
+    margin-bottom: 0;
+}
+
+figure>img {
+    width: 100%;
+}
+
+figcaption {
+    font-family: 'Comic Sans MS';
+    font-size: 20px;
+    color: darkred;
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+}
+
+section {
+    display: flex;
+    padding: 1%;
+    padding-top: 10px;
+}
+
+section>article {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 20px;
+    padding-top: 0;
+    background-image: url("./images/bg_g.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#section1>article>h2 {
+    padding-top: 10px;
+    grid-column: 1 /span 1;
+    grid-row: 1 / 2;
+    font-family: channel-webfont;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.2vw;
+    margin: 0;
+    display: inline;
+}
+
+#section1>img {
+    grid-column: 2 / -1;
+    grid-row: 1 /span 1;
+    width: 75%;
+}
+
+#section1>article>p {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: large;
+    font-family: 'Comic Sans MS'
+}
+
+section>article>a {
+    grid-column: 1 / -1;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+}
+
+#section2 {
+    display: grid;
+    grid-template-columns: 33% auto;
+    gap: 2%;
+}
+
+#section2>article,
+#section2>aside {
+    background-image: url("./images/container2.png");
+    background-repeat: repeat;
+    padding: 0;
+}
+
+#section2>hr {
+    width: 100%;
+}
+
+#section2>article {
+    display: grid;
+    grid-template-columns: 33% auto;
+    grid-template-rows: 3em auto;
+    gap: 5px;
+    padding: 5px;
+}
+
+#section2>article>h2,
+#section2>aside>h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: channel-webfont;
+    color: white;
+    font-weight: normal;
+    font-size: 1.2em;
+    margin: 0;
+    padding-top: 5px;
+}
+
+#section2>article>img {
+    box-sizing: border-box;
+    grid-column: 1 /span 1;
+    width: 100%;
+    border: solid;
+    border-color: white;
+    margin-top: 10px;
+}
+
+#section2>aside {
+    padding-top: 5px;
+}
+
+#section2>aside>ul {
+    list-style: none;
+    padding: 0;
+}
+
+#section2>aside>ul>hr {
+    width: 100%;
+    margin: 5px 0 5px -1px
+}
+
+#section2>aside>ul>li {
+    padding-left: 16%;
+}
+
+#section2>aside>ul>li>a {
+    color: black;
+    font-size: 1.2em;
+    padding-left: 8%;
+    font-family: 'Comic Sans MS'
+}
+
+#section2>article>div>h3 {
+    font-family: channel-webfont;
+    color: white;
+    font-weight: normal;
+    font-size: 0.8em;
+    margin: 0 0 0 5px;
+}
+
+#section2>article>div>p {
+    margin: 0 0 0 5px;
+    font-family: 'Comic Sans MS'
+
+}
+
+#section2>article>div>a {
+
+    margin-left: 50%;
+}
+
+.bouton {
+    display: inline-block;
+    height: 40px;
+    width: 110px;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Comic Sans MS';
+    color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.3s;
+}
+
+.bouton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-shadow: white 0 2px 5px;
+    transform: rotate(-10deg) scale(1.2);
+    transition-timing-function:ease;
+    transition-duration: 0.5s;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 0 auto;
+    width: 60%;
+    background: url("./images/container2.png") repeat, url("./images/footer-bg.png") no-repeat;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
+}
+
+footer>ul {
+    padding: 5% 0 0 0;
+    display: flex;
+    list-style: none;
+    font-family: channel-webfont;
+    justify-content: space-evenly;
+    flex-grow: 2;
+    font-size: 0.7em;
+}

@@ -1,0 +1,85 @@
+:root {
+    --color1: #30343F;
+    --color2: #FAFAFF;
+    --color3: #E4D9FF;
+    --color4: #374479;
+    --color5: #6E7799;
+    --color6: #C490D1;
+}
+
+body {
+    background-color: #30343F;
+    color: #FAFAFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 15% minmax(150px,10%);
+    color: #FAFAFF;
+    border: dashed #6E7799 1px;
+    padding: 5px 0 5px 20px;
+}
+
+form p{
+    grid-column: 1 / -1;
+    margin: 0 0 30px 0;
+}
+
+form label{
+    margin: 10px 0 10px 0;
+}
+
+form input{
+    color: #FAFAFF;
+    background-color: #374479;
+    border: solid #6E7799 2px;
+    height: min-content;
+}
+
+#addStudent{
+    color: #FAFAFF;
+    width:fit-content;
+    padding: 5px 13px 5px 13px;
+    margin-left: 10px;
+}
+
+#addStudent:hover{
+    background-color: #6E7799;
+    color: #30343F;
+    border: outset #374479 2px;
+}
+
+main {
+    width: 85%;
+    border: solid #E4D9FF 1px;
+    color: #E4D9FF;
+    padding: 10px;
+}
+
+table {
+    background-color: #374479;
+    border-collapse: collapse;
+    margin: 30px 0 30px 15px;
+}
+
+th, td{
+    border: solid #6E7799 2px;
+    padding: 3px;
+}
+
+th{
+    text-align: center;
+}
+
+.grade{
+    text-align: end;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    color: #FAFAFF;
+}

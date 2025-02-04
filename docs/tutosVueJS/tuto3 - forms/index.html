@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuto 3</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js" type="module"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <!--
+        submit.prevent fais la même chose que de faire _event.preventDefault() sur le handler
+        (C'est à dire empêcher le comportement par défaut de submit un form)
+        novalidate empêche le navigateur de faire les verifications de validation
+        -->
+        <form v-on:submit.prevent="handleSubmit" novalidate="true">
+            <!-- v-model lie dans les deux sens (input et affichage) une variable VueJS -->
+            <label for="prenom">Prenom: </label>
+            <input type="text" v-model="userInput" v-on:change="handleChange" name="prenom" id="prenom" placeholder="prenom" required>
+            <p>User Input: {{ userInput }}</p>
+
+            <!-- ça fonctionne sur tout type d'entrées utilisateur -->
+            <!-- :key sert à l'optimisation de vueJS, elle doit être unique -->
+            <select v-model="userType">
+                <option value="">none</option>
+                <option
+                v-bind:key="type.name"
+                v-bind:title="type.name"
+                v-bind:value="type.name"
+                v-for="type of types">
+                    {{type.name}}
+                </option>
+            </select>
+            <p>{{ userType }}</p>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

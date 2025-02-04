@@ -1,0 +1,35 @@
+html {
+    background-color: #7D8CC4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+html, header, footer{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+main{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 95vw;
+}
+h1, h2{
+    color:#726DA8;
+}
+
+p {
+    color:#B8336A;
+}
+
+footer{
+    font-weight: bold;
+    font-size: 20px;
+    color:  #A0D2DB;
+}

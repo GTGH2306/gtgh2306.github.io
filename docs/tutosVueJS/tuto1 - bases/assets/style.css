@@ -1,0 +1,25 @@
+#app{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width: fit-content;
+}
+
+img{
+    width: 10%;
+}
+
+.important{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}

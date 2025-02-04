@@ -1,0 +1,30 @@
+table{
+    border: solid black 2px;
+    border-collapse: collapse;
+}
+
+tr:nth-child(2n+1){
+    background-color: lightgray;
+}
+
+th, td{
+    padding: 5px;
+}
+
+tr {
+    border-bottom: solid grey 1px;
+}
+
+tr:last-child {
+    border-bottom: 0;
+}
+
+
+th{
+    text-align: center;
+    border-right: solid blue 1px;
+}
+
+th:last-child{
+    border-right: 0;
+}

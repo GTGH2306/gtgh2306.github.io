@@ -1,0 +1,119 @@
+:root {
+    --color1: #111;
+    --color2: #222;
+    --color3: #333;
+    --color4: #444;
+    --color5: #664;
+    --color6: white;
+    --color7: #FFFFFFCC;
+    --color8: yellow;
+    --color9: yellowgreen;
+    --color10: darkgreen;
+    --color11: #009900CC;
+    --color12: #CCCC00CC;
+    --color13: #CC6600CC;
+    --color14: #CC0000CC;
+}
+
+body{
+    background-color: var(--color1);
+    grid-template-columns: 2fr 1fr 2fr;
+    display: grid;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1{
+    font-family: 'Comic Sans MS';
+    width: 30%;
+    color: var(--color9);
+    justify-self: center;
+    display: inline;
+    display: flex;
+}
+
+img{
+    height: 50px;
+}
+
+fieldset{
+    color: var(--color6);
+    display: inline;
+    background-color: var(--color3);
+}
+
+#search{
+    height: 100%;
+    width: 100%;
+    font-size: large;
+    background-color: var(--color3);
+    border: none;
+    color: var(--color6);
+}
+
+::placeholder{
+    color: var(--color7);
+}
+
+table{
+    grid-column: 1 / -1;
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+}
+
+th{
+    color: var(--color9);
+    background-color: var(--color4);
+    width: auto;
+    padding: 10px;
+}
+a:hover {
+    text-decoration: underline;
+    user-select:none;
+}
+
+.tableName{
+    width: 100%;
+    text-align: start;
+}
+
+tr {
+    color: var(--color7);
+    text-align: center;
+}
+tr:hover, tr:hover > td:first-child, tr:hover > td:last-child{
+    background-color: var(--color5);
+}
+
+td{
+    padding: 10px;
+}
+
+tbody td:first-child, tbody td:last-child, tfoot td:first-child{
+    background-color: var(--color2);
+    color: var(--color8);
+}
+
+.deleteButton{
+    background: none;
+    border: none;
+}
+
+.nutriA{
+    background-color: var(--color10);
+    font-weight: bold;
+}
+.nutriB{
+    background-color: var(--color11);
+}
+.nutriC{
+    background-color: var(--color12);
+}
+.nutriD{
+    background-color: var(--color13);
+}
+.nutriE{
+    background-color: var(--color14);
+}

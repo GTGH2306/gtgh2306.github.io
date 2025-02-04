@@ -1,0 +1,42 @@
+
+        "id":1,
+        "titre":"Achat ventes en toute confiance",
+        "accroche":"Entreprise ou particulier, confier nous votre bien, nous vous accompagnons dans la vente de votre bien immobilier."
+      
+        "id":2,
+        "titre":"Une aventure humaine Rejoignez-nous!",
+        "accroche":"Rejoignez notre réseau, consulter nos offres d'emploi"
+      
+        "id":3,
+        "titre":"Consultez nos offres de logements neufs et anciens!",
+        "accroche":"De nombreuses offres à saisir dans le neuf et l'ancien, appartements bien situés, maisons individuelles, villas de charme, résidences."
+    	
+
+	"id" : 4,
+        "titre" : "Construire son projet immobilier",
+        "accroche" : "Vous n'avez pas d'idée sur votre projet immobilier? Vous hésitez entre plusieurs possibilités ? Vous avez un projet, mais vous n'êtes pas sur qu'il soit réalisable ?"
+   
+        "id" : 5,
+        "titre" : "Financer sa constrution, son projet ",
+        "accroche" : "Un tremplin, des financements pour réussir son projet immobilier "
+    
+        "id" : 6,
+        "titre" : "Se former",
+        "accroche" : "Se former à nos métiers de l'immobilier "
+   
+        "id" : 7,
+        "titre" : "Développer votre insvestissement, votre patrimoine!",
+        "accroche" : "Conseil en investissement locatif, courtage."
+  
+        "id" : 8,
+        "titre" : "Notre Métier c'est la gestion immobilière en Alsace",
+        "accroche" : "Services de solutions de gestion locative, de syndic permettent d'assurer la continuité de votre activité locative à court, moyen mais aussi à long terme."
+   
+        "id" : 9,
+        "titre" : "Rechercher un logement",
+        "accroche" : "Pour accelérer votre recherche de logement, achat ou location créer votre compte immoduchateau"
+    
+        "id" : 10,
+        "titre" : "Révéler vos talents",
+        "accroche" : "Solutions de gestion de patrimoine adaptées à votre budget"
+    

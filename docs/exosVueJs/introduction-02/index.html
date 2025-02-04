@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./main.js" defer></script>
+    <title>Introduction-02</title>
+</head>
+<body id="monApp">
+    <h1>Changer la taille du texte</h1>
+    <button @click="augmenterTaille">Augmenter la taille du texte</button>
+    <button @click="diminuerTaille">Diminuer la taille du texte</button>
+    <span> Taille actuelle : {{ taillePoliceReel }} px</span>
+    <input type="number" v-model="taillePolice">
+    <p :style="{ 'font-size': taillePoliceReel + 'px' }">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at distinctio quis libero nam illo reprehenderit, corporis exercitationem. Tenetur rerum vel, dignissimos expedita odio vitae optio quos eius ipsa quo?
+        Voluptatibus atque optio enim fugiat labore obcaecati et ad assumenda dolores, accusantium dolorum ut architecto, sequi praesentium reprehenderit aspernatur! Amet eos a tempore eligendi accusamus cumque corrupti commodi magnam laborum.
+        Sequi dicta asperiores sunt libero maiores iste dolorum necessitatibus id nesciunt! Esse, laboriosam! Quidem porro molestias distinctio amet cumque nihil illo sint aut provident libero. Odit laudantium cumque vero. Dicta?
+        Eaque, provident! Libero tempora sapiente facere aliquam a modi reprehenderit repellat inventore nulla, iste dolore iure quisquam quaerat suscipit, maxime non. Sed hic architecto iure culpa odio quasi sint dolore.
+        Enim perspiciatis mollitia, esse vel animi quo expedita praesentium facere non laboriosam eaque nisi dolore commodi quibusdam at vitae culpa voluptatum eos? Inventore veniam harum ipsa rerum itaque dolores nemo!
+    </p>
+</body>
+</html>

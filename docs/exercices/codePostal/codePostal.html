@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Postal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>
+        Code Postal
+    </h1>
+    <form>
+        <label for="choix-ville">Choisissez une ville: </label>
+        <input type="search" list="liste-ville" id="choix-ville">
+        <input type="button" id="confirmer" value="Confirmer">
+        
+        <datalist id="liste-ville">
+
+        </datalist>
+    </form>
+
+    <table>
+        <tr>
+            <th>Nom de ville : </th>
+            <td id="nom-ville">Aucun</td>
+        </tr>
+        <tr>
+            <th>Code Postal : </th>
+            <td id="code-postal">Aucun</td>
+        </tr>
+        <tr>
+            <th>Code Commune : </th>
+            <td id="code-commune">Aucun</td>
+        </tr>
+        <tr>
+            <th>Libellé d'Acheminement : </th>
+            <td id="libelle-acheminement">Aucun</td>
+        </tr>
+    </table>
+    <script src="./script.js"></script>
+</body>
+</html>

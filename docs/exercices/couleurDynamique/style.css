@@ -1,0 +1,25 @@
+#bloc{
+    background-color: aquamarine;
+}
+
+form{
+    width: fit-content;
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+    border: solid white 5px;
+}
+
+form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+ .field {
+    width: 100px;
+}
+
+ button {
+    width: min-content;
+}

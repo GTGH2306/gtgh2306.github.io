@@ -1,0 +1,53 @@
+:root{
+    --clr1: #ACCBE1;
+    --clr2: #536B78;
+    --clr3: #637081;
+    --clr4: #7C98B3;
+    --clr5: white;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--clr2);
+    color: var(--clr1);
+    border: solid 2px var(--clr1);
+    padding: 15px;
+    width: 50%;
+}
+
+form{
+    border: dotted 2px var(--clr1);
+    padding: 15px;
+}
+
+p {
+    margin: 10px 0 10px 0;
+}
+
+li {
+    color: var(--clr5);
+}
+
+table{
+    margin: 20px;
+    border-collapse: collapse;
+    background-color: var(--clr3);
+}
+
+th, td{
+    border: solid 1px var(--clr4);
+    padding: 5px;
+}
+
+input{
+    margin-right: 25px;
+}
+
+.supprButton {
+    text-align: center;
+}

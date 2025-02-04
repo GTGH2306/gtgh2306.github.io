@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog pictures</title>
+    <!-- add in Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./scripts/main.js" type="module"></script>
+
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div id="app">
+
+        <!-- Ici titleClasses a une liste de classes en attributs que je peux activer ou pas avec true/false -->
+        <h1 v-bind:class="titleClasses">{{ message }}</h1>
+
+        <!-- {{ variable }} affiche une variable VueJS -->
+        <p>Count: {{ count }}
+            <button v-on:click="minusCount">
+                
+                <!-- v-if n'affiche l'élément HTML que sous une condition -->
+                <span v-if="count > 0">Minus</span>
+                <!-- v-else affiche l'élément HTML si la condition n'est pas remplie -->
+                <span v-else>Stop pls</span>
+
+            </button>
+            <!-- comme v-if sans le v-else -->
+            <span v-show="count < 0"> Negatif</span>
+        </p>
+
+        <!-- v-on:\event\="\fonction\" permet est l'équivalent VueJS des events listeners -->
+        <button v-on:click="impBtn">Important</button>
+        <button v-on:click="wohloBtn">Wohlolo</button>
+
+        <!-- v-bind:\attribut\ permet de lier dynamiquement un attribut à une variable de data -->
+        <img v-bind:src="imageSource" v-bind:alt="imageAlt">
+
+        <!-- v-for répete un element html selon comme une boucle for -->
+        <ul>
+            <li v-for="(name, index) of tabeulo" v-bind:key="index">{{ index }}. {{ name }}</li>
+        </ul>
+    </div>
+</body>
+</html>

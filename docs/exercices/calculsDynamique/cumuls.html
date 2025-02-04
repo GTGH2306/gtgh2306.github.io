@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculs Dynamique</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form autocomplete="off">
+        <input autocomplete="false" name="hidden" type="text" style="display:none;">
+        <div id="Lines">
+            <div id="Line1">
+                <label for="Qte1">Qté:</label>
+                <input type="text" placeholder="0" name="Qte1" id="Qte1">
+                <label for="PrixUni1">Prix Unitaire:</label>
+                <input type="text" placeholder="0" name="PrixUni1" id="PrixUni1">
+                <label for="Prix1">Prix:</label>
+                <input type="text" readonly value="0" name="Prix1" id="Prix1">
+            </div>
+        </div>
+
+        <div id="buttons">
+            <button type="button" id="buttonMinus">-</button>
+            <button type="button" id="buttonPlus">+</button>
+        </div>
+        
+        <div id="total">
+            <hr>
+            <input type="text" readonly value="0" name="champTotal" id="champTotal">
+        </div>
+
+    </form>
+    <script src="./script.js"></script>
+</body>
+
+
+</html>

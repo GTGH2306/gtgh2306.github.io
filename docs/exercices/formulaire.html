@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon premier formulaire</title>
+</head>
+
+<body>
+    <h1>Formulaire d'inscription</h1>
+    <h2>Votre compte configuré sous 20 jours !</h2>
+
+    <form action="formulaire.html" method="get">
+        <fieldset>
+            <legend>Etat civil</legend>
+            <p>
+                <label for="fnom">Nom : </label>
+                <input type="text" name="fnom">
+            </p>
+            <p>
+                <label for="fprenom">Prenom : </label>
+                <input type="text" name="fprenom">
+            </p>
+            <p>
+                <label for="fdate">Date de Naissance : </label>
+                <input type="date" name="fdate">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informations de contact</legend>
+            <p>
+                <label for="fmail">Adresse Email : </label>
+                <input type="mail" name="fmail">
+            </p>
+            <p>
+                <label for="ftel">Téléphone : </label>
+                <input type="text" name="ftel">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <p>
+                <input type="checkbox" name="fconditions">
+                <label for="fconditions">J'accepte les <a
+                        href="https://www.youtube.com/watch?v=3X-iqFRGqbc&pp=ygUMc3Bpbm5pbmcgcmF0"
+                        target="_blank">conditions d'utilisations</a></label>
+            </p>
+            <p>
+                <input type="submit" value="S'inscrire">
+
+            </p>
+        </fieldset>
+    </form>
+
+
+
+</body>
+
+</html>

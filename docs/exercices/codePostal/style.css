@@ -1,0 +1,16 @@
+body{
+    background-color: lightgrey;
+}
+
+table{
+    margin: 15px;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: solid black 1px;
+    text-align: start;
+    background-color: white;
+    min-width: 100px;
+    padding: 5px;
+}

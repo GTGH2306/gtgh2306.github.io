@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couleur Dynamique</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Changement de couleurs</h1>
+    <form id="bloc">
+        <div>
+            <input type="text" class="field" id="redValue">
+            <button type="button" id="redButton">Rouge</button>
+        </div>
+        <div>
+            <input type="text" class="field" id="greenValue">
+            <button type="button" id="greenButton">Vert</button>
+        </div>
+        <div>
+            <input type="text" class="field" id="blueValue">
+            <button type="button" id="blueButton">Bleu</button>
+        </div>
+        <div>
+            <div>
+                <input type="radio" id="hexRadio" name="baseSelector" checked>
+                <label for="hexRadio">Hexadecimal</label>
+            </div>
+            <div>
+                <input type="radio" id="decRadio" name="baseSelector">
+                <label for="decRadio">Decimal</label>
+            </div>
+        </div>
+    </form>
+    <script src="./script2.js"></script>
+</body>
+</html>

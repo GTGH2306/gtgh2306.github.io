@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Résultat de l'évaluation</h1>
+
+        <form>
+            <p>Ajouter une note</p>
+
+            <label for="fullname">Nom Prénom :</label>
+            <input type="text" id="fullname">
+            <label for="grade">Note :</label>
+            <input type="text" id="grade">
+            <input type="button" id="addStudent" value="Ajouter">
+        </form>
+
+
+        <table id="results">
+            <thead>
+                <tr id="resultsHead">
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+
+            </tbody>
+
+        </table>
+
+        <ul id="list">
+            <li id="nbStudents"></li>
+            <li id="classAverage"></li>
+            <li id="nbAboveAverage"></li>
+            <li id="minRate"></li>
+        </ul>
+    </main>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

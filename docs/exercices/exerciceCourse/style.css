@@ -1,0 +1,80 @@
+:root {
+    --base-bg: #111111;
+    --base-txt: #CCCCCC;
+    --base-link: #E4D9FF;
+    --base-btn: #085E8F;
+    --base-btn-hover: #006caa;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: var(--base-bg);
+}
+
+main {
+    border: solid 1px var(--base-link);
+    padding: 20px;
+}
+
+.participants {
+    display: flex;
+    gap: 10px;
+}
+
+h1, h2 {
+    color: var(--base-link);
+    font-weight: bold;
+}
+
+p {
+    background-color: var(--base-link);
+    color: var(--base-btn);
+    padding: 10px;
+}
+
+table {
+    margin-top: 30px;
+    background-color: var(--base-btn);
+    color: var(--base-link);
+    border-radius: 10px;
+}
+
+th {
+    text-align: center;
+    font-weight: bold;
+}
+
+td {
+    text-align: left;
+}
+
+th, td {
+    padding: 5px;
+}
+
+tbody > tr:hover{
+    background-color: var(--base-btn-hover);
+}
+
+#countryFilter {
+    display: grid;
+    grid-template-columns: repeat(5, 10%);
+    gap: 3px;
+}
+
+#countryFilter > h2 {
+    grid-column: 1 / -1;
+}
+
+.countryCheckbox {
+    padding: 5px;
+    background-color: var(--base-btn);
+    color: var(--base-link);
+    border-radius: 10px;
+    border: none;
+}

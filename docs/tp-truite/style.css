@@ -1,0 +1,206 @@
+@font-face {
+    font-family: Goudy;
+    src: url('./materiaux_truite/fonts/goudybookletter1911-webfont.woff');
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('./materiaux_truite/img/fondvert.gif') repeat;
+
+    margin-top: 0;
+    margin-left: 5px;
+    margin-right: 35px;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -1;
+    gap:0;
+    background-color: #5cbe43;
+    border-bottom: solid #128624 1px;
+}
+
+#banniere{
+    display: flex;
+    width: 100%;
+}
+
+#logo{
+    width: 34.18%;
+}
+
+#moucheimg{
+    width: 65.81%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header > ul {
+    width: fit-content;
+    margin: 0 0 0 8%;
+    padding: 0;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    background-color: #128624;
+}
+header > ul > li{
+    border-left: white solid 2px;
+  
+    padding: 3px 10px 3px 10px;
+}
+
+header > ul > li:last-child{
+    border-right: white solid 2px;
+}
+
+header > ul > li:hover {
+    padding: 2px 10px 2px 10px;
+}
+
+header > ul > li:hover, .content > li:hover, .content2 > li:hover{
+    border: solid white 1px;
+    background-color: #5cbe43;
+}
+
+header > ul > li > a:hover, .content > li > a:hover, .content2 > li > a:hover{
+    color: #8cf317;
+}
+
+.content, .content2{
+    position: absolute;
+    display: none;
+    z-index: 1;
+    background-color: #128624;
+    padding: 0;
+}
+
+.content{
+    width: 100%;
+    top: 22px;
+    left: -1px;
+}
+
+.content2 {
+    width: 100%;
+    left: 100%;
+    top: -1px;
+}
+
+.content > li, .content2 > li{
+    border: solid white 1px;
+    padding: 3px 10px 3px 10px;
+}
+
+.contains{
+    position: relative;
+}
+
+ul li:hover ul {
+    display: block;
+}
+ul li:hover ul ul {
+    display: none;
+}
+ul ul li:hover ul {
+    display: block;
+}
+
+/* #presentation:hover #presentationContent,
+#lac:hover #lacContent,
+#methodePeche:hover #methodePecheContent,
+#appats:hover #appatsContent,
+#methodeLac:hover #methodeLacContent,
+#mouche:hover #moucheContent,
+#leurre:hover #leurreContent
+{
+    display: block;
+} */
+
+main{
+    display: grid;
+    grid-template-columns: minmax(15%, 180px) 1fr 16%;
+    background-color: rgb(222, 228, 145);
+    margin-top: 2px;
+}
+
+nav {
+    background-color: rgba(0,0,0,0.8);
+}
+
+nav > ul {
+    margin: 0;
+    padding: 8%;
+    background-color: black;
+}
+
+nav > ul > li{
+    padding: 10px;
+}
+
+nav > ul > li > a {
+    color: orangered;
+}
+
+nav > ul > li > a:hover {
+    color: white;
+}
+
+h1{
+    font-size: 2.8em;
+    font-weight: bold;
+}
+
+article{
+    margin-left: 20px;
+    margin-right: 2px;
+}
+
+article > img{
+    float: left;
+    min-width: 40%;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+article > p{
+    text-align: justify;
+    font-size: large;
+}
+
+aside > ul {
+    margin: 0;
+    padding: 25px;
+    background-color: black;
+}
+
+aside > ul > li{
+    padding: 2px;
+}
+
+aside > ul> li> a:hover{
+    color:orangered;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #128624;
+    color: white;
+}
+
+footer > p {
+    margin: 0;
+}
+
+#copyright{
+    color: rgb(2, 2, 167);
+}

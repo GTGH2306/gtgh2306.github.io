@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil - HandiA11y</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="defaultTheme defaultFont">
+    <header>
+        <div id="banner">
+            <a href="#main">Aller au contenu</a>
+            <img src="images/a11yNow.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="#">A11y</a></li>
+                <li><a href="#">Handicaps</a></li>
+                <li><a href="#">Faites un don</a></li>
+                <li><a href="#">Equipe</a></li>
+                <li><a href="#">Plan du site</a></li>
+                <li><input type="button" value="Paramêtres Accessibilité" id="paramsButton"></li>
+            </ul>
+        </nav>
+        <div role="search" id="search">
+            <label for="searchbar" class="sr-only">Champ de recherche</label>
+            <input type="search" placeholder="zone de recherche" id="searchbar">
+            <input type="button" value="Rechercher" id="searchbutton">
+        </div>
+    </header>
+
+    <div id="paramsOverlay">
+        <div id="params" role="dialog">
+            <h1>Paramêtres d'accessibilité</h1>
+            <button id="closeParams" type="button"><span class="sr-only">Fermer</span><img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMjQgNC4yLTQuMS00LjFoLS4xbC03LjggNy43LTcuOC03LjhoLS4xbC00LjEgNC4xIDcuOSA3LjktNy45IDcuOCA0LjEgNC4yaC4xbDcuOC03LjggNy44IDcuN2MwIC4xIDAgLjEuMSAwbDQuMS00LjEtNy44LTcuOHoiIGZpbGw9IiMzMTQ4NmUiLz48L3N2Zz4=" alt=""/></button>
+            <form>
+                <fieldset>
+                    <legend>Contrastes</legend>
+                    <label for="radioContrastDefault">Défaut</label>
+                    <input type="radio" id="radioContrastDefault" name="contrast" value="defaultTheme" class="radioTheme" checked>
+                    <label for="radioContrastContrast">Renforcer</label>
+                    <input type="radio" id="radioContrastContrast" class="radioTheme" value="contrastTheme" name="contrast">
+                    <label for="radioContrastInvert">Inverser</label>
+                    <input type="radio" id="radioContrastInvert" class="radioTheme" value="invertTheme" name="contrast">
+                </fieldset>
+                <fieldset>
+                    <legend>Police (dyslexie)</legend>
+                    <label for="radioDysDefault">Défaut</label>
+                    <input type="radio" id="radioDysDefault" name="font" value="defaultFont" checked>
+                    <label for="radioDysDys">Adapter</label>
+                    <input type="radio" id="radioDysDys" name="font" value="dysFont">
+                </fieldset>
+            
+            </form>
+        </div>
+    </div>
+
+    <main id="main">
+        <section id="bienvenue">
+            <h1>Bienvenue sur HandiA11y</h1>
+            <p>HandiA11y est un site spécialisé pour découvrir les bases de l'accessibilité web et les différents handicaps à prendre en compte.</p>
+            <h2>Pourquoi <abbr>A11y</abbr> et pas A11é ?</h2>
+            <p><abbr>A11É</abbr> est une abréviation pour accessibilité où 11 représente le nombre de lettres entre le a et le é du mot accessibilité. Cette même abbréviation dans sa version anglaise est plus jolie à l'oreille : A11Y</p>
+            <h2>Quelle est l'origine du mot HANDICAP ?</h2>
+            <p>Le mot handicap trouve son origine dans l'anglais médiéval. Il est dérivé de l'expression <b lang="en">hand in cap</b>, qui signifie main dans le chapeau. À l'époque, cette expression était utilisée dans les jeux de hasard pour indiquer qu'un joueur était désavantagé ou handicapé par rapport aux autres joueurs. Au fil du temps, le terme a été adopté dans d'autres contextes pour décrire une situation où une personne est désavantagée ou limitée dans ses capacités physiques, mentales ou sociales.</p>
+        </section>
+        <section id="principes">
+            <h2>Le WCAG et les 4 principes A11y</h2>
+            <div>
+                <div>
+                    <h1>Perceptible</h1>
+                    <p>Les informations et les composants de l'interface utilisateur doivent être perceptibles pour tous les utilisateurs, y compris ceux ayant des limitations sensorielles.</p>
+                </div>
+                <div>
+                    <h1>Utilisable</h1>
+                    <p>Les composants de l'interface utilisateur doivent être utilisables par tous les utilisateurs, y compris ceux ayant des limitations physiques ou cognitives.</p>
+                </div>
+                <div>
+                    <h1>Compréhensible</h1>
+                    <p>Les informations et les opérations doivent être compréhensibles pour tous les utilisateurs, y compris ceux ayant des limitations cognitives.</p>
+                </div>
+                <div>
+                    <h1>Robuste</h1>
+                    <p>Le contenu doit être robuste et fonctionnel sur différentes plateformes, y compris les technologies d'assistance, pour tous les utilisateurs.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Critères</h2>
+            <table id="criteres">
+                <caption>
+                    Les critères WCAG 2.1 sous forme de tableau
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Principes</th>
+                        <th scope="col">Critères</th>
+                        <th scope="col">Correspondances</th>
+                        <th scope="col">Objectifs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="4" scope="rowgroup">Perceptible</th>
+                        <td>1.1</td>
+                        <td>Alternatives textuelles</td>
+                        <td>Fournir des alternatives textuelles pour tout contenu non textuel afin qu'il puisse être modifié dans d'autres formes comme les gros caractères, le braille, la parole, les symboles ou un langage plus simple.</td>
+                    </tr>
+                    <tr>
+                        <td>1.2</td>
+                        <td>Médias temporels</td>
+                        <td>Fournir des alternatives aux médias temporels.</td>
+                    </tr>
+                    <tr>
+                        <td>1.3</td>
+                        <td>Adaptable</td>
+                        <td>Créez du contenu qui peut être présenté de différentes manières (par exemple une mise en page plus simple) sans perdre d'informations ou de structure.</td>
+                    </tr>
+                    <tr>
+                        <td>1.4</td>
+                        <td>Distinguable</td>
+                        <td>Facilitez la visualisation et l'écoute du contenu par les utilisateurs, notamment en séparant le premier plan de l'arrière-plan.</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="5" scope="rowgroup">Utilisable</th>
+                        <td>2.1</td>
+                        <td>Accessible au clavier</td>
+                        <td>Rendre toutes les fonctionnalités disponibles à partir d'un clavier.</td>
+                    </tr>
+                    <tr>
+                        <td>2.2</td>
+                        <td>Suffisamment de temps</td>
+                        <td>Donnez aux utilisateurs suffisamment de temps pour lire et utiliser le contenu.</td>
+                    </tr>
+                    <tr>
+                        <td>2.3</td>
+                        <td>Convulsions et réactions physiques</td>
+                        <td>Concevoir des contenus qui ne provoquent pas de convulsions ou des réactions physiques comme des crises épileptiques (zones clignotantes et flashs).</td>
+                    </tr>
+                    <tr>
+                        <td>2.4</td>
+                        <td>Navigable</td>
+                        <td>Fournir des moyens d'aider les utilisateurs à naviguer, à trouver du contenu et à déterminer où ils se trouvent.</td>
+                    </tr>
+                    <tr>
+                        <td>2.5</td>
+                        <td>Entrées ciblables</td>
+                        <td>Faciliter l'utilisation des fonctionnalités par les utilisateurs grâce à diverses entrées au-delà du clavier.</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3" scope="rowgroup">Compréhensible</th>
+                        <td>3.1</td>
+                        <td>Lisibilité du texte et de l'interface</td>
+                        <td>Rendre le contenu du texte lisible et compréhensible.</td>
+                    </tr>
+                    <tr>
+                        <td>3.2</td>
+                        <td>Prévisible</td>
+                        <td>Faites en sorte que les pages Web s'affichent et fonctionnent de manière prévisible.</td>
+                    </tr>
+                    <tr>
+                        <td>3.3</td>
+                        <td>Assistance à la saisie</td>
+                        <td>Aider les utilisateurs à éviter et à corriger les erreurs.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Robuste</th>
+                        <td>4.1</td>
+                        <td>Compatible</td>
+                        <td>Optimiser la compatibilité avec les agents utilisateurs actuels et futurs, y compris les technologies d'assistance.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <section>
+            <h2>Conformité</h2>
+            <table>
+                <caption>
+                    Tableau des 3 niveaux de conformité WCAG 2.1
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Niveaux</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">A</th>
+                        <td>Accessibilité de base, répondant aux besoins essentiels des utilisateurs handicapés ou en situation de handicap</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">AA</th>
+                        <td>Accessibilité avancée, garantissant une meilleure expérience pour la majorité des utilisateurs handicapés ou en situation de handicap</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">AAA</th>
+                        <td>Accessibilité maximale, offrant une expérience optimale pour tous les utilisateurs, y compris les utilisateurs handicapés</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Vous pouvez tester la lecture des 2 tableaux avec JAWS ou NVDA pour voir s'ils sont accessibles !</p>
+            <a href="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1">WCAG 2.1 en VO</a>
+        </section>
+        <section>
+            <h2 lang="en">Most common WCAG failures by WebAIM</h2>
+            <figcaption>Graphique des échecs les plus courants par WebAIM</figcaption>
+            <img src="./images/WebAIM_million.png"
+                alt="" />
+            <a href="https://webaim.org/projects/million/">Explication du graphique et du tableau (en anglais)</a>
+        </section>
+        <section>
+            <h2>Échecs et accessibilité</h2>
+            <table>
+                <caption>
+                    Tableau des échecs les plus courants concernant l'accessibilité numérique
+                </caption>
+                <thead>
+                    <tr>
+                        <th lang="en" scope="col">WCAG Failure Type</th>
+                        <th lang="en" scope="col"># of home pages</th>
+                        <th lang="en" scope="col">% of home pages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th lang="en" scope="row">Low contrast text</th>
+                        <td>852.868</td>
+                        <td>85.3%</td>
+                    </tr>
+                    <tr>
+                        <th lang="en" scope="row">Missing alternatives text for images</th>
+                        <td>679,964</td>
+                        <td>68%</td>
+                    </tr>
+                    <tr>
+                        <th lang="en" scope="row">Empty links</th>
+                        <td>581,408</td>
+                        <td>58.1%</td>
+                    </tr>
+                    <tr>
+                        <th lang="en" scope="row">Missing from input labels</th>
+                        <td>528,482</td>
+                        <td>52.8%</td>
+                    </tr>
+                    <tr>
+                        <th lang="en" scope="row">Missing document language</th>
+                        <td>329,612</td>
+                        <td>33.1%</td>
+                    </tr>
+                    <tr>
+                        <th lang="en" scope="row">Empty buttons</th>
+                        <td>250,367</td>
+                        <td>25%</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 HandiA11y. Tous droits réservés.</p>
+        <p>Envoyez un courriel à <a href="mailto:philippe.bouget(@)laposte.net">philippe.bouget(@)laposte.net</a> si vous souhaitez suivre une formation sur l'accessibilité.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

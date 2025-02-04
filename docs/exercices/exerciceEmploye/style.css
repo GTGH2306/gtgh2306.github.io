@@ -1,0 +1,84 @@
+:root {
+    --bg: rgb(255, 255, 255);
+    --halfRowsColor: rgb(230, 230, 230);
+    --titre: rgb(100, 100, 100);
+    --borders: rgb(200, 200, 200);
+    --duplicateButton: rgb(39, 158, 228);
+    --deleteButton: rgb(245, 51, 83);
+    --highlight: rgba(199, 209, 141, 0.5);
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+h1, p {
+    color: var(--titre);
+}
+
+table, th, td{
+    border: 1px solid var(--borders);
+}
+th, td{
+    padding: 10px;
+}
+th, tfoot>tr{
+    font-weight: bold;
+}
+td{
+    vertical-align: top;
+}
+table{
+    border-collapse: collapse;
+    font-size: 1.2rem;
+}
+
+tbody>tr:nth-child(even){
+    background-color: var(--halfRowsColor);
+}
+tbody > tr:hover {
+    background-color: var(--highlight);
+}
+
+button{
+    padding: 10px 15px 10px 15px;
+    font-size: 1.2rem;
+    color: var(--bg);
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#sortButton {
+    border: solid 2px var(--borders);
+    background-color: var(--bg);
+}
+#sortButton>i {
+    color: var(--borders);
+    margin: 0;
+}
+#sortButton:hover{
+    background-color: var(--halfRowsColor);
+}
+
+#idBtn:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+i{
+    margin-right: 10px;
+}
+.duplicateButton{
+    background-color: var(--duplicateButton);
+}
+.deleteButton{
+    background-color: var(--deleteButton);
+}

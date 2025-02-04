@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Nutriscore</title>
+</head>
+<body>
+    <h1>Cereals <img src="https://c.tenor.com/vFj78TINKRgAAAAC/tenor.gif"></h1>
+    <fieldset>
+        <legend>Rechercher</legend>
+        <input type="search" placeholder="Nom du céréale" id="search">
+    </fieldset>
+    <fieldset id="filters">
+        <legend>Filtrer</legend>
+        <fieldset id="nutri">
+            <legend>Nutriscore</legend>
+            <label for="nutriA">A</label>
+            <input type="checkbox" id="nutriA">
+            <label for="nutriB">B</label>
+            <input type="checkbox" id="nutriB">
+            <label for="nutriC">C</label>
+            <input type="checkbox" id="nutriC">
+            <label for="nutriD">D</label>
+            <input type="checkbox" id="nutriD">
+            <label for="nutriE">E</label>
+            <input type="checkbox" id="nutriE">
+        </fieldset>
+        <fieldset id="category">
+            <legend>Catégorie</legend>
+            <select id="searchSelect">
+                <option>Tous</option>
+                <option>Sans sucre</option>
+                <option>Pauvre en sel</option>
+                <option>Boost</option>
+            </select>
+        </fieldset>
+    </fieldset>
+    <table>
+        <thead>
+            <tr>
+                <th><a>ID</a></th>
+                <th class="tableName"><a>NOM</a></th>
+                <th><a>CALORIES</a></th>
+                <th><a>PROTEÏNES</a></th>
+                <th><a>SEL</a></th>
+                <th><a>FIBRES</a></th>
+                <th><a>GLUCIDES</a></th>
+                <th><a>SUCRE</a></th>
+                <th><a>POTASSIUM</a></th>
+                <th><a>VITAMINES</a></th>
+                <th><a>ÉVALUATION</a></th>
+                <th><a id="nsHead">NS</a></th>
+                <th>DEL</th>
+            </tr>
+        </thead>
+        <tbody id="results">
+            <tr class="line">
+                <td>-1</td>
+                <td class="tableName">Toto's Salt Breakfast</td>
+                <td>90</td>
+                <td>1</td>
+                <td>850</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>8.51</td>
+                <td class="nutriE">F</td>
+                <td><input type="button" value="❌" class="deleteButton"></td>
+            </tr>
+        </tbody>
+        <tfoot id="resultsFoot">
+            
+        </tfoot>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+</html>

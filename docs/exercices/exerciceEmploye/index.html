@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TP-Employe</title>
+</head>
+<body>
+    <main>
+        <h1>Employes</h1>
+        <p><em>This is the current list of employees</em></p> 
+        <table id="empTable">
+            <thead id="theadEmpTable">
+                <tr>
+                    <th id="idBtn">EID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Monthly salary <button id="sortButton"><i class="fa-solid fa-sort"></i></button></th>
+                    <th>Year of birth</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyEmpTable">
+            </tbody>
+            <tfoot id="tfootEmpTable">
+                <tr>
+                    <td id="sumOfEmployees">Sum</td>
+                    <td colspan="2"></td>
+                    <td id="salarySum">Sum$</td>
+                    <td colspan="2"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <script src="./script2.js"></script>
+</body>
+</html>

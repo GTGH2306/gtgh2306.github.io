@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tableau vuejs</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js" type="module"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Liste des personnes inscrites</h1>
+    <div id="monApp">
+        <form>
+            <p>Ajouter une personne</p>
+            <label for="prenom">Prénom: </label>
+            <input type="text" id="prenom" v-model="prenom">
+            <label for="nom">Nom: </label>
+            <input type="text" id="nom" v-model="nom">
+            <button @click="ajouterPersonne" type="button">Ajouter</button>
+            <p>{{ confirmMsg }}</p>
+        </form>
+        <ul>
+            <li v-for="person of people">
+                {{ person.firstname }} {{ person.name }}
+            </li>
+        </ul>
+        <table>
+            <thead>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Supprimer</th>
+            </thead>
+            <tbody>
+                <tr v-for="(person, index) of people">
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.firstname }}</td>
+                    <td>{{ person.mail }}</td>
+                    <td class="supprButton"><button type="button" @click="deleteRow" :data-idx="index"> X </button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
